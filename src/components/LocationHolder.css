@@ -1,0 +1,119 @@
+.location-data {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://images.pexels.com/photos/1183099/pexels-photo-1183099.jpeg?auto=compress&cs=tinysrgb&w=800");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .location-city-name {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    display: flex;
+    padding-right: 3vw;
+    padding-top: 2vh;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: 3em;
+      width: 100%;
+      font-style: italic;
+      display: flex;
+      justify-content: right;
+    }
+    p {
+      font-size: 1.2em;
+      display: flex;
+      font-style: italic;
+      justify-content: right;
+    }
+  }
+
+  .location-city-temp {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 15vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-style: italic;
+      font-size: 2.5em;
+    }
+  }
+
+  .location-detail {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25vw;
+    height: 15vh;
+    display: flex;
+
+    ul {
+      width: 100%;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 3vw;
+      padding-bottom: 2vh;
+
+      li {
+        display: flex;
+        font-size: 0.63em;
+        justify-content: space-between;
+        border-bottom: 1px solid white;
+
+        p {
+          margin-right: 2vw;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .location-city-temp{
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 850px) {
+
+  .location-city-temp{
+    margin-left: 10px;
+  }
+
+  .location-city-name{
+   margin-right: 10px;
+   margin-top: 10px;
+   font-size: 0.7em;
+  }
+ 
+}
+
+@media screen and (max-width:650px) {
+  .location-city-name{
+    margin-right: 15px;
+    margin-top: 10px;
+    font-size: 0.6em;
+  }
+  .location-city-temp{
+    margin-left: 10px;
+    font-size: 0.7em;
+  }
+}

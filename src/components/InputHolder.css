@@ -1,0 +1,168 @@
+
+.custom-weather {
+  width: 100%;
+  height: 100%;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 7vh 3vw;
+
+  .input-area {
+    display: flex;
+    width: 100%;
+    height: 5vh;
+
+    input {
+      width: 90%;
+      height: 100%;
+      font-size: 22px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      font-style: italic;
+      border-bottom: 2px dashed white;
+    }
+
+    button {
+      width: 17%;
+      height: 100%;
+      font-size: 28px;
+      color: white;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .weather-div {
+    width: 100%;
+    margin-top: 3vh;
+
+    .city-name,
+    .city-temp {
+      width: 100%;
+      font-size: 1.3em;
+      display: flex;
+      justify-content: right;
+    }
+    .city-temp {
+      font-size: 1.1em;
+      margin: 0.5vh 0vw;
+    }
+
+    .weather-detail ul {
+      width: 100%;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      font-size: 0.7em;
+      margin: 5vh 0vw;
+
+      li {
+        display: flex;
+        /* height: 3vh; */
+        flex-wrap: nowrap;
+        overflow: scroll;
+        justify-content: space-between;
+        margin-bottom: 2vh;
+        border-bottom: 1px solid white;
+        text-transform: capitalize;
+
+        p {
+          margin-right: 5vw;
+        }
+
+        span {
+          display: flex;
+          justify-content: right;
+          padding-right: 2px;
+        }
+      }
+    }
+  }
+
+  .error {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+  }
+}
+
+.notData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 2em;
+  font-style: italic;
+}
+
+.line {
+  width: 60%;
+  height: 2px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+
+  .line-bar {
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    left: -20%;
+    background-color: white;
+    animation: slide 1.5s linear infinite;
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: -20%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .error{
+    font-size: 0.9em !important;
+  }
+  
+}
+
+@media screen and (max-width: 850px) {
+  .custom-weather{
+    overflow: hidden;
+
+    .weather-div{
+      margin-top: 3vh;
+
+      .city-name{
+        font-size: 1.1em;
+      }
+
+      .city-temp{
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  .notData{
+    font-size: 0.8em;
+  }
+
+  .error{
+    font-size: 0.8em !important;
+  }
+ 
+}
