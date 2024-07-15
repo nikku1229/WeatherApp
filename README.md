@@ -19,4 +19,4 @@ A simple weather application built using React that fetches weather data from an
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/weather-app.git
+   git clone https://github.com/nikku1229/WeatherApp.git
